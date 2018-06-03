@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="syu.EveryPet.repository.mapper.MainMapper">
+	<!-- 
+	<resultMap type="carVO" id="carVOMap">
+	</resultMap>
+	
+	<resultMap type="imageFiles" id="imageFilesMap">
+		<result column="img_no" property="imgNo" />
+		<result column="car_no" property="carNo" />
+		<result column="sys_name" property="sysName" />
+		<result column="ori_name" property="oriName" />
+		<result column="file_path" property="filePath" />
+		<result column="thumb_path" property="thumbPath" />
+		<result column="detail_thumb_path" property="detailThumbPath" />
+		<result column="reg_date" property="regDate" />
+		<result column="update_date" property="updateDate" />
+	</resultMap>
+	
+	<resultMap type="optOfCar" id="optOfCarMap">
+		<result column="car_no" property="carNo" />
+		<result column="option_no" property="optionNo" />
+	</resultMap>
+	
+	<resultMap type="modelTypeCar" id="modelTypeCarMap">
+		<result column="model_type_car_no" property="modelTypeCarNo" />
+		<result column="type_car_no" property="typeCarNo" />
+		<result column="val" property="val" />
+		<result column="displacement" property="displacement" />
+		<result column="max_output" property="maxOutput" />
+		<result column="fuel_eff" property="fuelEff" />
+		<result column="release" property="release" />
+	</resultMap>
+	<resultMap type="typeCar" id="typeCarMap">
+		<result column="type_car_no" property="typeCarNo" />
+		<result column="type_car_group_no" property="typeCarGroupNo" />
+		<result column="mnf_no" property="mnfNo" />
+		<result column="val" property="val" />
+		<result column="img" property="img" />
+	</resultMap>
+	
+
+	<select id="recentSpecialList" resultMap="carVOMap">
+		select a.* from 
+			( select @RNUM:= @RNUM + 1 AS ROWNUM, car.* 
+			  from car, (SELECT @RNUM := 0) R 
+			  where car.special = 1 
+			  order by car_no desc )
+		a where a.ROWNUM between 1 and 5
+	</select>
+	<select id="recentNormalList" resultMap="carVOMap">
+		select a.* from 
+			( select @RNUM:= @RNUM + 1 AS ROWNUM, car.* 
+			  from car, (SELECT @RNUM := 0) R 
+			  where car.special = 0 
+			  order by car_no desc )
+		a where a.ROWNUM between 1 and 6
+	</select>
+	
+	<select id="imgList" parameterType="int" resultMap="imageFilesMap">
+		select * from image_files where car_no = #{carNo}
+	</select>
+	
+	<select id="optList" parameterType="int" resultMap="optOfCarMap">
+		select * from opt_of_car where car_no = #{carNo}
+	</select>
+	
+	<select id="selectModelTypeCar" parameterType="int" resultMap="modelTypeCarMap">
+		select * from model_type_car where model_type_car_no = #{model_no}
+	</select>
+	<select id="selectTypeCar" parameterType="int" resultMap="typeCarMap">
+		select * from type_car where type_car_no = (select type_car_no from model_type_car where model_type_car_no = #{model_no})
+	</select>
+	
+
+	<select id="recentViewList" parameterType="java.util.List" resultMap="carVOMap">
+		select * from car
+		where car_no in
+		<foreach item="item" collection="list" index="index" separator="," open="(" close=")">
+		#{item}
+		</foreach>
+	</select>
+	
+	<select id="bucketList" parameterType="int" resultMap="carVOMap">
+		select car.* from
+		car car,
+		(select * from bucket where member_no = #{memberNo}) bucket
+		where car.car_no = bucket.car_no;
+	</select>
+	 -->
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

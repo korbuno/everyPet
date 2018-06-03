@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+html, body {
+	position: relative;
+	height: 100%;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: auto;
+}
+
+.swiper-slide>img {
+	width: 100%;
+}
+
+#menu_container_first_line, #menu_container_second_line {
+	padding-top: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: auto;
+}
+#menu_container_first_line > div > div{
+	background-color: #e0e0e0;
+}
+#menu_container_second_line {
+	padding-top: 0%;
+}
+
+#menu_container_first_line > div > div, #menu_container_second_line > div > div{
+	border: 1px solid #cccccc;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#menu_container_first_line > div > div > i, #menu_container_second_line > div > div > i{
+	padding-top: 8%;
+}
